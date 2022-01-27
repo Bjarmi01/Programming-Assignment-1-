@@ -5,9 +5,6 @@ def modulus(a, b):  # ONLY NEEDS TO WORK FOR POSITIVE INTEGERS
         return a
     return modulus(a-b,b)
 
-print(modulus(8,3))
-
-
 def how_many(lis1, lis2):
     #TODO: remove 'pass' and implement functionality
     pass
