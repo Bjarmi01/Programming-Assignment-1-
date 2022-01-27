@@ -1,3 +1,6 @@
+from array import array
+
+
 class IndexOutOfBounds(Exception):
     pass
 
@@ -69,7 +72,7 @@ class ArrayList:
     #Time complexity: O(1) - constant time
     def clear(self):
         # TODO: remove 'pass' and implement functionality
-        pass
+        self.clear()
 
     #Time complexity: O(n) - linear time in size of list
     def insert_ordered(self, value):
