@@ -1,6 +1,3 @@
-from array import array
-
-
 class IndexOutOfBounds(Exception):
     pass
 
@@ -19,7 +16,7 @@ class ArrayList:
         pass
 
     #Time complexity: O(n) - linear time in size of list
-    def __str__(self):
+    def __str__(self): # Bjarmi
         # TODO: remove 'pass' and implement functionality
         return_string = ""
         return return_string
@@ -30,9 +27,9 @@ class ArrayList:
         pass
 
     #Time complexity: O(n) - linear time in size of list
-    def insert(self, value, index):
+    def insert(self, value, index): # Bjarmi
         # TODO: remove 'pass' and implement functionality
-        pass
+        self.arr.insert(index, value)
 
     #Time complexity: O(1) - constant time
     def append(self, value):
@@ -40,9 +37,10 @@ class ArrayList:
         pass
 
     #Time complexity: O(1) - constant time
-    def set_at(self, value, index):
+    def set_at(self, value, index): # Bjarmi
         # TODO: remove 'pass' and implement functionality
-        pass
+        self.arr.pop(index, value)
+        self.arr.insert(index, value)
 
     #Time complexity: O(1) - constant time
     def get_first(self):
@@ -50,7 +48,7 @@ class ArrayList:
         pass
 
     #Time complexity: O(1) - constant time
-    def get_at(self, index):
+    def get_at(self, index): # Bjarmi
         # TODO: remove 'pass' and implement functionality
         pass
 
@@ -60,7 +58,7 @@ class ArrayList:
         pass
 
     #Time complexity: O(n) - linear time in size of list
-    def resize(self):
+    def resize(self): # Bjarmi
         # TODO: remove 'pass' and implement functionality
         pass
 
@@ -70,9 +68,9 @@ class ArrayList:
         pass
 
     #Time complexity: O(1) - constant time
-    def clear(self):
+    def clear(self): # Bjarmi
         # TODO: remove 'pass' and implement functionality
-        self.clear()
+        self.arr.clear()
 
     #Time complexity: O(n) - linear time in size of list
     def insert_ordered(self, value):
@@ -81,7 +79,7 @@ class ArrayList:
 
     #Time complexity: O(n) - linear time in size of list
     #Time complexity: O(log n) - logarithmic time in size of list
-    def find(self, value):
+    def find(self, value): # Bjarmi
         # TODO: remove 'pass' and implement functionality
         pass
 
