@@ -1,3 +1,6 @@
+from re import X
+
+
 class IndexOutOfBounds(Exception):
     pass
 
@@ -18,8 +21,7 @@ class ArrayList:
     #Time complexity: O(n) - linear time in size of list
     def __str__(self): # Bjarmi
         # TODO: remove 'pass' and implement functionality
-        return_string = ""
-        return return_string
+        return ', '.join(self.arr)
 
     #Time complexity: O(n) - linear time in size of list
     def prepend(self, value):
@@ -29,7 +31,9 @@ class ArrayList:
     #Time complexity: O(n) - linear time in size of list
     def insert(self, value, index): # Bjarmi
         # TODO: remove 'pass' and implement functionality
-        self.arr.insert(index, value)
+        if (len(self.arr) - 1) < index:
+            raise IndexOutOfBounds()    
+        return self.arr.insert(index, value)
 
     #Time complexity: O(1) - constant time
     def append(self, value):
@@ -39,8 +43,10 @@ class ArrayList:
     #Time complexity: O(1) - constant time
     def set_at(self, value, index): # Bjarmi
         # TODO: remove 'pass' and implement functionality
+        if (len(self.arr) - 1) < index:
+            raise IndexOutOfBounds()    
         self.arr.pop(index, value)
-        self.arr.insert(index, value)
+        return self.arr.insert(index, value)
 
     #Time complexity: O(1) - constant time
     def get_first(self):
@@ -50,7 +56,9 @@ class ArrayList:
     #Time complexity: O(1) - constant time
     def get_at(self, index): # Bjarmi
         # TODO: remove 'pass' and implement functionality
-        pass
+        if (len(self.arr) - 1) < index:
+            raise IndexOutOfBounds()
+        return self.arr[index]
 
     #Time complexity: O(1) - constant time
     def get_last(self):
