@@ -1,6 +1,3 @@
-from re import X
-
-
 class IndexOutOfBounds(Exception):
     pass
 
@@ -21,7 +18,7 @@ class ArrayList:
     #Time complexity: O(n) - linear time in size of list
     def __str__(self): # Bjarmi
         # TODO: remove 'pass' and implement functionality
-        return ', '.join(self.arr)
+        return ', '.join(self.array)
 
     #Time complexity: O(n) - linear time in size of list
     def prepend(self, value):
@@ -31,9 +28,9 @@ class ArrayList:
     #Time complexity: O(n) - linear time in size of list
     def insert(self, value, index): # Bjarmi
         # TODO: remove 'pass' and implement functionality
-        if (len(self.arr) - 1) < index:
+        if (len(self.array) - 1) < index:
             raise IndexOutOfBounds()    
-        return self.arr.insert(index, value)
+        return self.array.insert(index, value)
 
     #Time complexity: O(1) - constant time
     def append(self, value):
@@ -43,10 +40,10 @@ class ArrayList:
     #Time complexity: O(1) - constant time
     def set_at(self, value, index): # Bjarmi
         # TODO: remove 'pass' and implement functionality
-        if (len(self.arr) - 1) < index:
+        if (len(self.array) - 1) < index:
             raise IndexOutOfBounds()    
-        self.arr.pop(index, value)
-        return self.arr.insert(index, value)
+        self.array.pop(index, value)
+        return self.array.insert(index, value)
 
     #Time complexity: O(1) - constant time
     def get_first(self):
@@ -56,9 +53,9 @@ class ArrayList:
     #Time complexity: O(1) - constant time
     def get_at(self, index): # Bjarmi
         # TODO: remove 'pass' and implement functionality
-        if (len(self.arr) - 1) < index:
+        if (len(self.array) - 1) < index:
             raise IndexOutOfBounds()
-        return self.arr[index]
+        return self.array[index]
 
     #Time complexity: O(1) - constant time
     def get_last(self):
@@ -68,7 +65,8 @@ class ArrayList:
     #Time complexity: O(n) - linear time in size of list
     def resize(self): # Bjarmi
         # TODO: remove 'pass' and implement functionality
-        pass
+        self.array.extend(array2)
+        self.array += array2
 
     #Time complexity: O(n) - linear time in size of list
     def remove_at(self, index):
@@ -78,7 +76,7 @@ class ArrayList:
     #Time complexity: O(1) - constant time
     def clear(self): # Bjarmi
         # TODO: remove 'pass' and implement functionality
-        self.arr.clear()
+        return self.array.clear()
 
     #Time complexity: O(n) - linear time in size of list
     def insert_ordered(self, value):
